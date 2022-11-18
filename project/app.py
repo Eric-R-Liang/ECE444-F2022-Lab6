@@ -11,7 +11,7 @@ from flask import (
     redirect,
     url_for,
     abort,
-    jsonify,
+    jsonify
 )
 from flask_sqlalchemy import SQLAlchemy
 
@@ -70,7 +70,6 @@ def add_entry():
     db.session.commit()
     flash("New entry was successfully posted")
     return redirect(url_for("index"))
-
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
